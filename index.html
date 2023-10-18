@@ -11,6 +11,44 @@
     <div class="container">
 <h1>SVG - Scalable Vector Graphic</h1>
 
+<img src="images/smily.svg" alt="blue square with red circle in the center">
+
+<!-- copy from images svg files-->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" class="dice">
+    <rect x="0" y="0" width="200" height="200" fill="#4dd0e1"/>
+    <circle cx="100" cy="100" r="25" fill="#d50000" />
+    </svg>
+
+<!--Dice with 4 dots-->
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" class="dice">
+        <rect x="0" y="0" width="200" height="200" fill="#4dd0e1"/>
+        <circle cx="50" cy="50" r="25" fill="#d50000" id="dot" />
+        <use xlink:href="#dot" x="100"></use>
+        <use xlink:href="#dot" y="100"></use>
+        <use xlink:href="#dot" x="100" y="100"></use>
+        </svg>
+
+        <!--Dice with 5 dots, using defs-->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" class="dice">
+            <defs> 
+                <rect x="0" y="0" width="200" height="200" fill="#4dd0e1" rx="8" ry="8" id="rect"/>
+                <circle r="25" fill="#d50000" id="point"/>
+            </defs>
+            <use xlink:href="#rect"></use>
+            <g>
+                <use xlink:href="#point" x="50" y="50"></use>
+                <use xlink:href="#point" x="50" y="150"></use>
+                <use xlink:href="#point" x="150" y="150"></use>
+                <use xlink:href="#point" x="150" y="50"></use>
+                <use xlink:href="#point" x="100" y="100"></use>
+                
+            </g>
+
+            </svg>
+
+
+    
+
     </div>
     
 </body>
